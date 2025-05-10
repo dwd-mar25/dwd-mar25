@@ -1,15 +1,33 @@
 # --- USE: Grade Assigner ---
-score = 85 # Try 95, 72, 65, 40
+
+# --- MODIFY ---
+# 1. Change the condition for 'A' to be score >= 93.
+# 2. Add a new grade: 'B+' for scores >= 87 and < 93.
+#       Where would this elif go in the chain?
+# 3. What if a student gets an 'A' OR a 'B+'? They should also get
+#       a message 'Eligible for scholarship consideration.'
+#       Add this logic."
+#       (This requires an or condition or a separate if checking the letter_grade).
+# 4. Modify the is_passing logic. Instead of score >= 60, what if passing
+#       was defined as NOT getting an 'F'?
+#       How would you use not and the letter_grade?
+
+score = 72 # Try 95, 72, 65, 40
 letter_grade = ""
 is_passing = score >= 60 # Simple pass/fail check
 has_honors = False
 
 print(f"Score: {score}")
 
-if score >= 90 and is_passing: # Using 'and'
+# 'and' is a Boolean operator (because it evaluates to True or False)
+# Both sides must be true for 'and' to be true
+# At least one side must be true for 'or' to be true
+if score < 0 or score > 100:
+    print("Invalid score")
+elif score >= 90 and is_passing: # Using 'and'
     letter_grade = "A"
     has_honors = True
-elif score >= 80 and is_passing:
+elif score >= 80 and is_passing: # "else if" only evaluated if original condition is false
     letter_grade = "B"
 elif score >= 70 and is_passing:
     letter_grade = "C"
