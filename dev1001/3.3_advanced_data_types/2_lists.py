@@ -14,7 +14,6 @@ empty_list = []
 
 print(f"Shopping List: {shopping_list}")
 
-"""
 # Accessing elements (Zero-indexed) and Slicing
 print(f"First item: {shopping_list[0]}")
 print(f"Last item: {shopping_list[-1]}") # Negative indexing
@@ -23,7 +22,6 @@ print(f"First two scores: {scores[0:2]}")
 # Common functions
 print(f"Number of scores: {len(scores)}")
 print(f"'milk' in shopping list? {'milk' in shopping_list}") # Membership test
-
 
 # --- MODIFY ---
 
@@ -42,18 +40,20 @@ print(f"Inserted: {shopping_list}")
 # Remove items
 removed_item = shopping_list.pop() # Removes and returns the last item
 print(f"Popped '{removed_item}', list is now: {shopping_list}")
+# shopping_list.append('apples')
 shopping_list.remove("apples") # Removes the first occurrence of 'apples'
 print(f"Removed 'apples': {shopping_list}")
 
 # Extending with another list
 more_items = ["eggs", "cheese"]
 shopping_list.extend(more_items) # Adds elements from another iterable
-# Alternative: shopping_list = shopping_list + more_items (creates new list)
+# Alternative: new_shopping_list = shopping_list + more_items (creates new list)
 print(f"Extended: {shopping_list}")
 
 # Sorting (in-place)
-scores.sort()
-print(f"Sorted scores: {scores}")
+# scores = [88, 92, 75, 100]
+# shopping_list.extend(scores)
+shopping_list.sort()
+print(f"Sorted shopping list: {shopping_list}")
 scores.sort(reverse=True)
 print(f"Reverse sorted scores: {scores}")
-"""

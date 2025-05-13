@@ -16,7 +16,6 @@ empty_tuple = ()
 print(f"Point: {point}")
 print(f"Color: {rgb_color}")
 
-"""
 # Accessing elements (Zero-indexed)
 print(f"X-coordinate: {point[0]}")
 print(f"Blue value: {rgb_color[2]}")
@@ -39,13 +38,14 @@ point = (10, 20)
 print(f"Original point: {point}")
 
 # 'Modifying' often means creating a *new* tuple
-new_point = point + (30,) # Concatenation creates a new tuple
-#new_point = (*point, 30) # Same result using * to unpack point
+# new_point = point + (30,) # Concatenation creates a new tuple
+# new_point = (15, point[1])
+new_point = (*point, 30) # Same result using * to unpack point
 print(f"New point (original unchanged): {new_point}")
 
 # Slicing also creates new tuples
 # Syntax: tuple_var[start_index:end_index]
 #           start_index is inclusive, end_index is exclusive.
-first_two_color_values = rgb_color[0:2]
+# rgb_color = (255, 0, 128, "Medium Magenta")
+first_two_color_values = rgb_color[-2:]
 print(f"First two color values: {first_two_color_values}")
-"""
